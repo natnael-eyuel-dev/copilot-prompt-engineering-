@@ -1,4 +1,4 @@
-# AI Virtual Painter — OpenCV + MediaPipe
+# AI Virtual Painter - OpenCV + MediaPipe
 
 This repository contains a compact, modular implementation of an AI‑powered virtual painter.
 The app uses a webcam feed, MediaPipe hand tracking, and OpenCV to let a user paint and erase
@@ -32,8 +32,18 @@ sudo apt update
 sudo apt install -y libgl1 libglvnd0 libegl1-mesa libx11-6 libxext6 libxrender1 libsm6 libglib2.0-0
 ```
 
-If you are running in a headless container (CI, Codespaces) and do not need `cv2.imshow()` or
-native GUI windows, replace `opencv-python` with `opencv-python-headless` in `requirements.txt`.
+If you are running in a headless environment (for example CI, Codespaces, or a remote server
+without a display) and do not require native GUI windows such as those created by `cv2.imshow()`,
+use the headless OpenCV wheel instead. Replace `opencv-python` with `opencv-python-headless` in
+`requirements.txt`:
+
+```text
+opencv-python-headless
+mediapipe
+numpy
+```
+
+Note: the headless package omits GUI/windowing support (and may also behave differently for VideoCapture on some platforms). If you intend to run the app with a local webcam and visible windows on your machine, keep `opencv-python` and install any required system graphics libraries for your OS (see the Linux-related step above for an example).  
 
 Run the app
 
