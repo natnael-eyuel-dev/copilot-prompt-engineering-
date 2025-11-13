@@ -1,0 +1,49 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+.eggs/
+.pytest_cache/
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+env.bak/
+
+# Distribution / packaging
+build/
+dist/
+*.egg
+
+# Editors/OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Media & large assets (if you prefer to keep headers in repo, remove these)
+# header/*.png
+
+# System-specific
+*.sqlite3
+
+# Byte-compiled
+*.pyc
+
+# Coverage
+coverage.xml
+htmlcov/
+
+# Pipenv / Poetry
+Pipfile.lock
+poetry.lock
